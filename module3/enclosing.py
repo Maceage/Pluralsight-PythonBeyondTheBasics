@@ -5,7 +5,7 @@ def enclosing():
     message = 'enclosing'
 
     def local():
-        global message
+        nonlocal message
         message = 'local'
 
     print('enclosing message:', message)
