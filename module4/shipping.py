@@ -2,10 +2,10 @@ class ShippingContainer:
 
     next_serial = 1337
 
-    @staticmethod
-    def _get_next_serial():
-        result = ShippingContainer.next_serial
-        ShippingContainer.next_serial += 1
+    @classmethod
+    def _get_next_serial(cls):
+        result = cls.next_serial
+        cls.next_serial += 1
         return result
 
     def __init__(self, owner_code, contents):
