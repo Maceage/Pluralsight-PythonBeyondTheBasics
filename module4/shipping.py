@@ -26,7 +26,7 @@ class ShippingContainer:
     def __init__(self, owner_code, contents):
         self.owner_code = owner_code
         self.contents = contents
-        self.bic = ShippingContainer._make_bic_code(
+        self.bic = self._make_bic_code(
             owner_code=owner_code,
             serial=ShippingContainer._get_next_serial())
 
